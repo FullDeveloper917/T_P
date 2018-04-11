@@ -1,0 +1,126 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.property.david.tp.Fragments.MapFragment">
+
+    <LinearLayout
+        android:id="@+id/layoutMain_MapFrg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorMyWhite"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutHeader_Search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorMyGray_1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45sp">
+
+                <Button
+                    android:id="@+id/btnRtn_MapFrg"
+                    style="@style/Base.Widget.AppCompat.Button.Borderless"
+                    android:layout_width="45sp"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|center"
+                    android:text="@string/fa_chevron_left"
+                    android:textColor="@color/colorMyGray_10"
+                    android:textSize="24sp"
+                    android:padding="0sp"
+                    android:layout_gravity="right|center"/>
+
+                <TextView
+                    android:id="@+id/txtName_MapFrg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center"
+                    android:paddingBottom="2sp"
+                    android:text="#ManhattanAttacks"
+                    android:singleLine="true"
+                    android:textColor="@color/colorMyGray_10"
+                    android:textSize="26sp"/>
+
+                <Button
+                    android:id="@+id/btnShare_MapFrg"
+                    style="@style/Base.Widget.AppCompat.Button.Borderless"
+                    android:layout_width="45sp"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|center"
+                    android:text="@string/fa_share_square_o"
+                    android:textColor="@color/colorMyGray_10"
+                    android:textSize="24sp"
+                    android:padding="0sp"
+                    android:layout_gravity="right|center"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtCount_MapFrg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14,323"
+                android:textColor="@color/colorMyGray_10"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingBottom="10sp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <fragment
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/map"
+                tools:context=".MapsActivity"
+                android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+            <ImageView
+                android:id="@+id/imgSuccess_MapFrg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="32dp"
+                android:src="@drawable/img_success"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btnAdd_MapFrg"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:background="@drawable/add_button_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.9"
+                android:text="@string/fa_plus"
+                android:textColor="@color/colorMyGray_10"
+                android:textSize="24sp"/>
+        </android.support.constraint.ConstraintLayout>
+
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

@@ -1,0 +1,58 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.property.david.tp.Fragments.RecentFragment">
+
+    <LinearLayout
+        android:id="@+id/layoutMain_RecentFrg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorMyWhite"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_marginTop="30sp"
+            android:layout_marginBottom="20sp"
+            android:paddingLeft="20sp"
+            android:paddingRight="20sp" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="Recent"
+                android:textColor="@color/colorMyGray_10"
+                android:textStyle="bold"
+                android:textSize="28sp"/>
+
+            <Button
+                android:id="@+id/btnAdd_RecentFrg"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="45sp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/fa_plus"
+                android:textColor="@color/colorMyGray_10"
+                android:textSize="24sp"
+                android:padding="0sp"
+                android:layout_gravity="right|center"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listTopics_RecentFrg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorMyWhite"
+            android:paddingLeft="20sp"
+            android:paddingRight="20sp" />
+
+
+    </LinearLayout>
+
+</FrameLayout>

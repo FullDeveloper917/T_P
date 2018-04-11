@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.property.david.tp.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/layoutMain_Main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorMyWhite"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/frgMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/colorMyGray_8" />
+
+            <LinearLayout
+                android:id="@+id/layoutControlTab_Main"
+                android:layout_width="match_parent"
+                android:layout_height="60sp"
+                android:background="@color/colorMyGray_1"
+                android:padding="5sp">
+
+                <LinearLayout
+                    android:id="@+id/layoutRecent_Main"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtIconRecent_Main"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="bottom|center"
+                        android:padding="0sp"
+                        android:text="@string/fa_tablet"
+                        android:textColor="@color/colorMyGray_10"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/txtRecent_Main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top|center"
+                        android:padding="0sp"
+                        android:text="Recent"
+                        android:textColor="@color/colorMyGray_10"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutSearch_Main"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtIconSearch_Main"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="bottom|center"
+                        android:padding="0sp"
+                        android:text="@string/fa_search"
+                        android:textColor="@color/colorMyBlue1"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/txtSearch_Main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top|center"
+                        android:padding="0sp"
+                        android:text="Search"
+                        android:textColor="@color/colorMyBlue1"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar_Main"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"/>
+
+
+</android.support.constraint.ConstraintLayout>
